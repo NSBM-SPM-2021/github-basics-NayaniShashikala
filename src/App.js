@@ -1,17 +1,17 @@
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import './index.css'
+import Header from "./components/Header/Header";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edited. Pipeline added.
-        </p>
-        
-      </header>
-    </div>
+     <BrowserRouter>
+      <div className="app" style = {{backgroundImage:'url(./public/Group 792.png)'}}>
+        <Header />
+      </div>
+     
+      </BrowserRouter>
   );
 }
 

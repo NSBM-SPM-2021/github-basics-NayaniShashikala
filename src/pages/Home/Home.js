@@ -15,7 +15,13 @@ const Home = () => {
                     <TextField
                         select label="Select Category" 
                         variant= "outlined"
-                        style= {{ marginBottom: 20 }} />                </div>
+                        style= {{ marginBottom: 20 }} 
+                    >   
+
+                    {/* {Categories} */}
+
+                    </TextField>             
+                </div>
              </div>
             <img src ='/quiz2.svg' className= 'banner' alt="quiz img"></img>
 

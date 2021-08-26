@@ -21,6 +21,7 @@
     height: 30%;
 }
 
+
 @media (max-width: 800px) {
     .content {
         flex-direction: column-reverse;
@@ -34,4 +35,13 @@
     .settings {
         width: 100%;
     }
+}
+
+.settings_select {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    flex: 0.8;
+    justify-content: space-evenly;
 }

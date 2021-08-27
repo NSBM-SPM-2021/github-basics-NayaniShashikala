@@ -3,3 +3,5 @@ const Categories = [
     { category: "Harry Potter", value:10 },
 
 ];
+
+export default Categories;

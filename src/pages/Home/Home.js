@@ -1,5 +1,7 @@
 import "./Home.css";
-import { TextField } from "@material-ui/core";
+import { Button, MenuItem, TextField } from "@material-ui/core";
+import Categories, { } from '../../Data/Categories';
+
 const Home = () => {
     return( 
         <div className='content'>
@@ -17,10 +19,19 @@ const Home = () => {
                         variant= "outlined"
                         style= {{ marginBottom: 20 }} 
                     >   
+                    {
+                     Categories.map((cat)=> (
 
-                    {/* {Categories} */}
+                        <MenuItem key = {cat.category} value = {cat.value} >
+                        {cat.category}
+                        </MenuItem>
 
-                    </TextField>             
+                        ))
+                       }
+                    </TextField>  
+                    <Button variant='contained' color ='primary'>
+                        Start Quiz
+                    </Button>           
                 </div>
              </div>
             <img src ='/quiz2.svg' className= 'banner' alt="quiz img"></img>

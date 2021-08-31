@@ -32,7 +32,7 @@ const Question = ({
   };
 
   const handleNext = () => {
-    if (currQues > 8) {
+    if (currQues > 5) {
       history.push("/result");
     } else if (selected) {
       setCurrQues(currQues + 1);
@@ -40,10 +40,10 @@ const Question = ({
     } else setError("Please select an option first");
   };
 
-  const handleQuit = () => {
-    setCurrQues(0);
-    setQuestions();
-  };
+  // const handleQuit = () => {
+  //   setCurrQues(0);
+  //   setQuestions();
+  // };
 
   return (
     <div className="question">
@@ -52,11 +52,11 @@ const Question = ({
       <div className="singleQuestion">
         <h2>{questions[currQues].question}</h2>
         <div className="options">
-          
+        {error && <ErrorMessage>{error}</ErrorMessage>}
           {options &&
             options.map((i) => (
               <button
-                className={`singleOption  ${selected && handleSelect(i)}`}
+                className={`singleOption   ${selected && handleSelect(i)}`}
                 key={i}
                 onClick={() => handleCheck(i)}
                 disabled={selected}
@@ -72,7 +72,7 @@ const Question = ({
             size="large"
             style={{ width: 185 }}
             href="/"
-            onClick={() => handleQuit()}
+            // onClick={() => handleQuit()}
           >
             Quit
           </Button>

@@ -16,7 +16,7 @@ function App() {
 
   const fetchQuestions = async (category = "", difficulty = "") => {
     const { data } = await axios.get(
-      `https://opentdb.com/api.php?amount=5${
+      `https://opentdb.com/api.php?amount=10${
         category && `&category=${category}`
       }${difficulty && `&difficulty=${difficulty}`}&type=multiple`
     );
@@ -27,7 +27,7 @@ function App() {
 
   return (
      <BrowserRouter>
-      <div className="app" style = {{backgroundImage:'url(./public/Group 792.png)'}}>
+      <div className="app" style = {{backgroundImage: 'url(/Group 792.png)' }}>
         <Header />
         <Switch>
           <Route path = '/' exact>
@@ -35,13 +35,6 @@ function App() {
               name={name} 
               setName={setName}
               fetchQuestions = {fetchQuestions} />
-          </Route>
-          <Route path = '/quiz' exact>
-            <Quiz 
-              name = {name}
-              setName={setName}
-              fetchQuestions={fetchQuestions}
-            />
           </Route>
           <Route path="/quiz">
             <Quiz

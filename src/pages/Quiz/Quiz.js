@@ -28,16 +28,12 @@ const Quiz = ({name, questions, score, setScore, setQuestions  }) => {
 
     return (
     <div className="quiz">
-      <span className="subtitle">Welcome, {name}</span>
+      <span className="subtitle" >Welcome, {name}</span>
 
       {questions ? (
         <>
           <div className="quizInfo">
             <span>{questions[currQues].category}</span>
-            <span>
-              {/* {questions[currQues].difficulty} */}
-              Score : {score}
-            </span>
           </div>
           <Question
             currQues={currQues}

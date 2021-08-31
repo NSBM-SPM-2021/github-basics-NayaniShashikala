@@ -7,8 +7,8 @@
 
 .subtitle {
   font-size: 25px;
-  border: 1px solid black;
-  box-shadow: 4px 4px 2px black;
+  /* border: 1px solid black; */
+  color: teal;
   padding: 5px 10px;
 }
 

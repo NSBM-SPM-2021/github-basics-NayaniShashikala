@@ -17,7 +17,7 @@ const Home = ({name,setName, fetchQuestions}) => {
     return( 
         <div className='content'>
             <div className='settings'>
-                <span style={{fontSize:20 }}>Enter Name and select quiz category to start the quiz.</span>
+                <span style={{fontSize:20 }}>Enter name and select quiz category to start the quiz.</span>
 
              <div className='settings_select'>
                     <TextField 

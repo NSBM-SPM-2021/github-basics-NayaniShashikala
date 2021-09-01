@@ -1,0 +1,23 @@
+name: React CI
+
+on: 
+  push:
+    branches:
+      - "Development"
+  # pull_request:
+  #   branches:
+  #     - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.17]
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: npm run build
+      # - run: npm test

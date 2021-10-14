@@ -3,7 +3,7 @@ import "./Header.css";
 
 const Header = () => {
     return (
-    <div className="header">
+    <div className="header" data-testid = "header-title">
         <Link to="/" className ="title">Smart Quiz Hub</Link>
         <hr className="divider"/> 
     </div>

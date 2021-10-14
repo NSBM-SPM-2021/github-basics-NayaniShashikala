@@ -22,9 +22,10 @@ const Home = ({name,setName, fetchQuestions}) => {
              <div className='settings_select'>
                     <TextField 
                     style={{ marginBottom: 20}}
-                    label = 'Enter Your Name'
+                    label = 'Enter your name'
                     variant="outlined"
                     onChange= {(e) => setName(e.target.value)}
+                    data-testid = "name"
                     />
                     <TextField
                         select label="Select Category" 
@@ -45,7 +46,7 @@ const Home = ({name,setName, fetchQuestions}) => {
                     </TextField>
 
 
-                    <Button variant='contained' color ='primary' onClick={handleSubmit}>
+                    <Button variant='contained' color ='primary' data-testid ="startQuiz-button" onClick={handleSubmit}>
                         Start Quiz
                     </Button>           
                 </div>
